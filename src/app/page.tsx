@@ -5,33 +5,33 @@ export default function Home() {
   return (
     <div className="h-screen bg-[#637A9F]">
       <title>M.Ibrahim Resume</title>
-      <div style={styles.container}>
+      <div className="flex font-sans">
         {/* Left Section */}
-        <div style={styles.leftSection}>
-          <div style={styles.profileContainer}>
+        <div className="m-4 w-1/4 bg-[#0B192C] text-white p-10 text-center h-[600px]">
+          <div className="flex flex-col items-center">
             {/* Profile Picture */}
             <Image
               src={abc}
               alt="Profile Picture"
               width={120}
               height={120}
-              style={styles.profileImage}
+              className="rounded-full mb-4"
             />
-            <h2 style={styles.name} className="antialiased hover:text-teal-300 duration-300">
+            <h2 className="text-xl font-bold mb-4 hover:text-teal-300 duration-300">
               Muhammad Ibrahim Mubashir
             </h2>
-            <p style={styles.email} className="antialiased hover:text-teal-300 duration-300">
+            <p className="text-sm mb-4 hover:text-teal-300 duration-300">
               muhammadibrahimmubashir.2010@gmail.com
             </p>
-            <p style={styles.phone} className="antialiased hover:text-teal-300 duration-300">
+            <p className="text-sm hover:text-teal-300 duration-300">
               0344-2662662
             </p>
           </div>
         </div>
 
         {/* Right Section */}
-        <div style={styles.rightSection}>
-          <section style={styles.section}>
+        <div className="w-3/4 p-5 text-gray-800">
+          <section className="mb-5">
             <div className="font-extrabold">
               <h2>★ <u>Education:-</u></h2>
             </div>
@@ -45,18 +45,20 @@ export default function Home() {
             <p>Computer Science Student (2016-2026)</p>
           </section>
 
-          <section style={styles.section}>
+          <section className="mb-5">
             <div className="font-extrabold">
               <h2>★ <u>Skills</u></h2>
             </div>
-            <div style={styles.skillsContainer}>
+            <div className="flex gap-4 flex-wrap">
               {["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js"].map((skill) => (
-                <span key={skill} style={styles.skillBadge}>{skill}</span>
+                <span key={skill} className="bg-[#0B192C] text-white p-2 rounded-full text-sm">
+                  {skill}
+                </span>
               ))}
             </div>
           </section>
 
-          <section style={styles.section}>
+          <section className="mb-5">
             <div className="font-extrabold">
               <h2>★ <u>Work Experience:-</u></h2>
             </div>
@@ -76,72 +78,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Styles (inline for simplicity)
-const styles = {
-  container: {
-    display: "flex",
-    fontFamily: "Arial, sans-serif",
-  },
-  leftSection: {
-    margin: "15px",
-    width: "28%",
-    backgroundColor: "#0B192C",
-    color: "#fff",
-    padding: "40px",
-    textAlign: "center",
-    height: "600px",
-  },
-  profileContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-  },
-  profileImage: {
-    borderRadius: "50%",
-    marginBottom: "10px",
-  },
-  name: {
-    fontSize: "1.5em",
-    fontWeight: "bold",
-    marginBottom: "15px",
-  },
-  email: {
-    fontSize: "0.9em",
-    margin: "5px 0",
-    marginBottom: "15px",
-  },
-  phone: {
-    fontSize: "0.9em",
-    margin: "5px 0",
-  },
-  button: {
-    marginTop: "15px",
-    padding: "10px 15px",
-    border: "none",
-    backgroundColor: "#0056b3",
-    color: "#fff",
-    borderRadius: "5px",
-    cursor: "pointer",
-  },
-  rightSection: {
-    width: "75%",
-    padding: "20px",
-    color: "#333",
-  },
-  section: {
-    marginBottom: "20px",
-  },
-  skillsContainer: {
-    display: "flex",
-    gap: "15px",
-    flexWrap: "wrap",
-  },
-  skillBadge: {
-    backgroundColor: "#0B192C",
-    color: "#fff",
-    padding: "5px 10px",
-    borderRadius: "10px",
-    fontSize: "0.9em",
-  },
-};
