@@ -7,7 +7,7 @@ export default function Home() {
       <title>M.Ibrahim Resume</title>
       <div className="flex font-sans">
         {/* Left Section */}
-        <div className="m-4 w-1/4 bg-[#0B192C] text-white p-10 text-center h-[600px]">
+        <div className="m-4 w-[30%] bg-[#0B192C] text-white p-10 text-center h-[550px]">
           <div className="flex flex-col items-center">
             {/* Profile Picture */}
             <Image
@@ -15,7 +15,7 @@ export default function Home() {
               alt="Profile Picture"
               width={120}
               height={120}
-              className="rounded-full mb-4"
+              className="rounded-[70px] mb-4"
             />
             <h2 className="text-xl font-bold mb-4 hover:text-teal-300 duration-300">
               Muhammad Ibrahim Mubashir
@@ -36,11 +36,11 @@ export default function Home() {
               <h2>★ <u>Education:-</u></h2>
             </div>
             <div className="font-semibold">
-              <p>▪ Montessori</p>
+              <b><p>▪ Montessori</p></b>
             </div>
             <p>Mariam Child Development Centre (2014-2016)</p>
             <div className="font-semibold">
-              <p>▪ Habib Public School</p>
+              <b><p>▪ Habib Public School</p></b>
             </div>
             <p>Computer Science Student (2016-2026)</p>
           </section>
@@ -51,7 +51,7 @@ export default function Home() {
             </div>
             <div className="flex gap-4 flex-wrap">
               {["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js"].map((skill) => (
-                <span key={skill} className="bg-[#0B192C] text-white p-2 rounded-full text-sm">
+                <span key={skill} className="bg-[#0B192C] text-white p-2 rounded-[60px] text-sm">
                   {skill}
                 </span>
               ))}
@@ -63,12 +63,12 @@ export default function Home() {
               <h2>★ <u>Work Experience:-</u></h2>
             </div>
             <div className="font-semibold">
-              <p>▪ TypeScript Developer</p>
+              <b><p>▪ TypeScript Developer</p></b>
             </div>
             <p>MIM Company (2022 - 2023)</p>
             <p>I worked on building web apps, APIs, and backend services with TypeScript for reliable code.</p>
             <div className="font-semibold">
-              <p>▪ Web Developer</p>
+              <b><p>▪ Web Developer</p></b>
             </div>
             <p>(2024 - Present)</p>
             <p>Developed responsive websites for various clients using web technologies.</p>
