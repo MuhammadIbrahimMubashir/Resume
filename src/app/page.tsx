@@ -7,7 +7,7 @@ export default function Home() {
       <title>M.Ibrahim Resume</title>
       <div className="flex font-sans">
         {/* Left Section */}
-        <div className="m-4 w-[35%] bg-[#0B192C] text-white p-10 text-center h-[550px]">
+        <div className="m-4 w-[40%] bg-[#0B192C] text-white p-10 text-center h-[550px]">
           <div className="flex flex-col items-center">
             {/* Profile Picture */}
             <Image
