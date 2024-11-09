@@ -3,7 +3,7 @@ import abc from "../app/image/abc.jpeg";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[#637A9F]">
+    <div className="h-full bg-[#637A9F]">
       <title>M.Ibrahim Resume</title>
       <div className="flex font-sans">
         {/* Left Section */}
