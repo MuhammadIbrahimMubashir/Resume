@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <div className="h-full bg-[#637A9F]">
       <title>M.Ibrahim Resume</title>
-      <div className="flex font-sans">
+      <div className="flex flex-col md:flex-row font-sans">
         {/* Left Section */}
-        <div className="m-4 w-[42%] bg-[#0B192C] text-white p-10 text-center h-[550px]">
+        <div className="m-4 w-full md:w-[42%] bg-[#0B192C] text-white p-10 text-center md:h-[550px]">
           <div className="flex flex-col items-center">
             {/* Profile Picture */}
             <Image
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
         {/* Right Section */}
-        <div className="w-3/4 p-5 text-gray-800">
+        <div className="w-full md:w-3/4 p-5 text-gray-800">
           <section className="mb-5">
             <div className="font-extrabold">
               <h2>★ <u>Education:-</u></h2>
