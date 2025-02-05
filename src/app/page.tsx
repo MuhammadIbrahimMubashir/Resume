@@ -18,9 +18,11 @@ export default function Home() {
     const style = `
       <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
-        .resume-container { background: #637A9F; color: black; padding: 20px; }
-        .left-section { background: #0B192C; color: white; padding: 20px; text-align: center; }
-        .skills span { background: #0B192C; color: white; padding: 5px 10px; border-radius: 10px; }
+        .resume-container { background: #F5F7FA; color: #333; padding: 20px; }
+        .left-section { background: #2E3B4E; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+        .skills span { background: #2E3B4E; color: white; padding: 8px 15px; border-radius: 20px; }
+        h2 { color: #1F2937; }
+        p { color: #4B5563; }
       </style>
     `;
 
@@ -33,69 +35,80 @@ export default function Home() {
   if (!isClient) return null; // Prevents server-side rendering issues
 
   return (
-    <div className="h-full bg-[#637A9F] p-4">
+    <div className="h-full bg-[#F5F7FA] p-4 font-sans">
       <title>M.Ibrahim Resume</title>
 
-      <div ref={resumeRef} id="resume" className="resume-container flex flex-col md:flex-row font-sans">
+      <div ref={resumeRef} id="resume" className="resume-container flex flex-col md:flex-row gap-6 md:gap-12 items-center">
         {/* Left Section */}
-        <div className="left-section m-4 w-full md:w-[42%] p-10 text-center md:h-[550px]">
+        <div className="left-section w-full md:w-[38%] p-6 text-center rounded-lg shadow-lg">
           <div className="flex flex-col items-center">
-            <Image src={abc} alt="Profile Picture" width={120} height={120} className="rounded-full mb-4" />
-            <h2 className="text-xl font-bold mb-2">Muhammad Ibrahim Mubashir</h2>
-            <p className="text-sm mb-2">muhammadibrahimmubashir.2010@gmail.com</p>
-            <p className="text-sm">0344-2662662</p>
+            <Image
+              src={abc}
+              alt="Profile Picture"
+              width={150}
+              height={150}
+              className="rounded-full mb-4 border-4 border-white shadow-md"
+            />
+            <h2 className="text-2xl font-bold mb-2">Muhammad Ibrahim Mubashir</h2>
+            <p className="text-sm text-gray-300 mb-1">muhammadibrahimmubashir.2010@gmail.com</p>
+            <p className="text-sm text-gray-300">0344-2662662</p>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="w-full md:w-3/4 p-5 text-gray-800">
-          <section className="mb-5">
-            <div className="font-extrabold">
-              <h2>★ <u>Education:-</u></h2>
+        <div className="w-full md:w-3/4 p-6 bg-white rounded-lg shadow-lg text-gray-800">
+          <section className="mb-6">
+            <h2 className="font-extrabold text-xl text-[#1F2937] mb-2">★ <u>Education</u></h2>
+            <div className="font-semibold mb-1">
+              <b>▪ Montessori</b>
             </div>
-            <div className="font-semibold">
-              <b><p>▪ Montessori</p></b>
+            <p className="text-gray-600 mb-3">Mariam Child Development Centre (2014-2016)</p>
+            <div className="font-semibold mb-1">
+              <b>▪ Habib Public School</b>
             </div>
-            <p>Mariam Child Development Centre (2014-2016)</p>
-            <div className="font-semibold">
-              <b><p>▪ Habib Public School</p></b>
-            </div>
-            <p>Computer Science Student (2016-2026)</p>
+            <p className="text-gray-600">Computer Science Student (2016-2026)</p>
           </section>
 
-          <section className="mb-5">
-            <div className="font-extrabold">
-              <h2>★ <u>Skills</u></h2>
-            </div>
+          <section className="mb-6">
+            <h2 className="font-extrabold text-xl text-[#1F2937] mb-2">★ <u>Skills</u></h2>
             <div className="flex gap-4 flex-wrap">
               {["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js"].map((skill) => (
-                <span key={skill} className="bg-[#0B192C] text-white p-2 rounded-[60px] text-sm">
+                <span
+                  key={skill}
+                  className="bg-[#2E3B4E] text-white p-3 rounded-full text-sm shadow-md mb-2"
+                >
                   {skill}
                 </span>
               ))}
             </div>
           </section>
 
-          <section className="mb-5">
-            <div className="font-extrabold">
-              <h2>★ <u>Work Experience:-</u></h2>
+          <section className="mb-6">
+            <h2 className="font-extrabold text-xl text-[#1F2937] mb-2">★ <u>Work Experience</u></h2>
+            <div className="font-semibold mb-1">
+              <b>▪ TypeScript Developer</b>
             </div>
-            <div className="font-semibold">
-              <b><p>▪ TypeScript Developer</p></b>
+            <p className="text-gray-600 mb-3">MIM Company (2022 - 2023)</p>
+            <p className="text-gray-600">
+              I worked on building web apps, APIs, and backend services with TypeScript for reliable code.
+            </p>
+            <div className="font-semibold mb-1">
+              <b>▪ Web Developer</b>
             </div>
-            <p>MIM Company (2022 - 2023)</p>
-            <p>I worked on building web apps, APIs, and backend services with TypeScript for reliable code.</p>
-            <div className="font-semibold">
-              <b><p>▪ Web Developer</p></b>
-            </div>
-            <p>(2024 - Present)</p>
-            <p>Developed responsive websites for various clients using web technologies.</p>
+            <p className="text-gray-600">(2024 - Present)</p>
+            <p className="text-gray-600">
+              Developed responsive websites for various clients using web technologies.
+            </p>
           </section>
         </div>
-       </div> 
+      </div>
+
       {/* Download Button */}
-      <div className="flex justify-center mt-4">
-        <button onClick={handleDownload} className="bg-green-500 text-white px-4 py-2 rounded-md">
+      <div className="flex justify-center mt-6">
+        <button
+          onClick={handleDownload}
+          className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-3 rounded-full shadow-md hover:scale-105 transition duration-300"
+        >
           Download Resume
         </button>
       </div>
