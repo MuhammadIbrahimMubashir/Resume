@@ -1,9 +1,20 @@
+"use client"; // Ensure it's a Client Component
 import Image from "next/image";
 import abc from "../app/image/abc.jpeg";
+import { useRef, useEffect, useState } from "react";
 
 export default function Home() {
+  const resumeRef = useRef<HTMLDivElement | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensure the component is rendered on the client
+  }, []);
+
   const handleDownload = () => {
-    const resumeContent = document.getElementById("resume").innerHTML;
+    if (!resumeRef.current) return;
+
+    const resumeContent = resumeRef.current.innerHTML;
     const style = `
       <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
@@ -14,16 +25,18 @@ export default function Home() {
     `;
 
     const newWindow = window.open("", "", "width=800,height=900");
-    newWindow.document.write(`<html><head><title>M_Ibrahim_Resume</title>${style}</head><body>${resumeContent}</body></html>`);
-    newWindow.document.close();
-    newWindow.print();
+    newWindow?.document.write(`<html><head><title>M_Ibrahim_Resume</title>${style}</head><body>${resumeContent}</body></html>`);
+    newWindow?.document.close();
+    newWindow?.print();
   };
+
+  if (!isClient) return null; // Prevents server-side rendering issues
 
   return (
     <div className="h-full bg-[#637A9F] p-4">
       <title>M.Ibrahim Resume</title>
 
-      <div id="resume" className="resume-container flex flex-col md:flex-row font-sans">
+      <div ref={resumeRef} id="resume" className="resume-container flex flex-col md:flex-row font-sans">
         {/* Left Section */}
         <div className="left-section m-4 w-full md:w-[42%] p-10 text-center md:h-[550px]">
           <div className="flex flex-col items-center">
