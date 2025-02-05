@@ -50,21 +50,48 @@ export default function Home() {
         {/* Right Section */}
         <div className="w-full md:w-3/4 p-5 text-gray-800">
           <section className="mb-5">
-            <h2 className="font-bold">★ <u>Education</u></h2>
-            <p>Habib Public School (2016-2026)</p>
+            <div className="font-extrabold">
+              <h2>★ <u>Education:-</u></h2>
+            </div>
+            <div className="font-semibold">
+              <b><p>▪ Montessori</p></b>
+            </div>
+            <p>Mariam Child Development Centre (2014-2016)</p>
+            <div className="font-semibold">
+              <b><p>▪ Habib Public School</p></b>
+            </div>
+            <p>Computer Science Student (2016-2026)</p>
           </section>
 
           <section className="mb-5">
-            <h2 className="font-bold">★ <u>Skills</u></h2>
-            <div className="skills flex gap-2 flex-wrap">
-              {["HTML", "CSS", "JavaScript", "Next.js"].map(skill => (
-                <span key={skill} className="p-2 rounded-full text-sm">{skill}</span>
+            <div className="font-extrabold">
+              <h2>★ <u>Skills</u></h2>
+            </div>
+            <div className="flex gap-4 flex-wrap">
+              {["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Node.js"].map((skill) => (
+                <span key={skill} className="bg-[#0B192C] text-white p-2 rounded-[60px] text-sm">
+                  {skill}
+                </span>
               ))}
             </div>
           </section>
-        </div>
-      </div>
 
+          <section className="mb-5">
+            <div className="font-extrabold">
+              <h2>★ <u>Work Experience:-</u></h2>
+            </div>
+            <div className="font-semibold">
+              <b><p>▪ TypeScript Developer</p></b>
+            </div>
+            <p>MIM Company (2022 - 2023)</p>
+            <p>I worked on building web apps, APIs, and backend services with TypeScript for reliable code.</p>
+            <div className="font-semibold">
+              <b><p>▪ Web Developer</p></b>
+            </div>
+            <p>(2024 - Present)</p>
+            <p>Developed responsive websites for various clients using web technologies.</p>
+          </section>
+        </div>
       {/* Download Button */}
       <div className="flex justify-center mt-4">
         <button onClick={handleDownload} className="bg-green-500 text-white px-4 py-2 rounded-md">
