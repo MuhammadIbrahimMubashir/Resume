@@ -49,9 +49,9 @@ export default function Home() {
               height={150}
               className="rounded-full mb-4 border-4 border-white shadow-md"
             />
-            <h2 className="text-2xl font-bold mb-2">Muhammad Ibrahim Mubashir</h2>
-            <p className="text-sm mb-1">muhammadibrahimmubashir.2010@gmail.com</p>
-            <p className="text-sm">0344-2662662</p>
+            <h2 className="text-2xl text-gray-700 font-bold mb-2">Muhammad Ibrahim Mubashir</h2>
+            <p className="text-sm text-gray-700 mb-1">muhammadibrahimmubashir.2010@gmail.com</p>
+            <p className="text-sm text-gray-700">0344-2662662</p>
           </div>
         </div>
 
