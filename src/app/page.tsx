@@ -92,6 +92,7 @@ export default function Home() {
             <p>Developed responsive websites for various clients using web technologies.</p>
           </section>
         </div>
+       </div> 
       {/* Download Button */}
       <div className="flex justify-center mt-4">
         <button onClick={handleDownload} className="bg-green-500 text-white px-4 py-2 rounded-md">
