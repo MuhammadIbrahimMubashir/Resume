@@ -19,7 +19,7 @@ export default function Home() {
       <style>
         body { font-family: Arial, sans-serif; padding: 20px; }
         .resume-container { background: #F5F7FA; color: #333; padding: 20px; }
-        .left-section { background: #2E3B4E; color: white; padding: 20px; text-align: center; border-radius: 8px; }
+        .left-section { background: #2E3B4E; color: #2D3748; padding: 20px; text-align: center; border-radius: 8px; }
         .skills span { background: #2E3B4E; color: white; padding: 8px 15px; border-radius: 20px; }
         h2 { color: #1F2937; }
         p { color: #4B5563; }
@@ -40,7 +40,7 @@ export default function Home() {
 
       <div ref={resumeRef} id="resume" className="resume-container flex flex-col md:flex-row gap-6 md:gap-12 items-center">
         {/* Left Section */}
-        <div className="left-section w-full md:w-[38%] p-6 text-center rounded-lg shadow-lg">
+        <div className="left-section w-full md:w-[38%] p-6 text-center rounded-lg shadow-lg text-[#2D3748]">
           <div className="flex flex-col items-center">
             <Image
               src={abc}
@@ -50,8 +50,8 @@ export default function Home() {
               className="rounded-full mb-4 border-4 border-white shadow-md"
             />
             <h2 className="text-2xl font-bold mb-2">Muhammad Ibrahim Mubashir</h2>
-            <p className="text-sm text-gray-300 mb-1">muhammadibrahimmubashir.2010@gmail.com</p>
-            <p className="text-sm text-gray-300">0344-2662662</p>
+            <p className="text-sm text-gray-700 mb-1">muhammadibrahimmubashir.2010@gmail.com</p>
+            <p className="text-sm text-gray-700">0344-2662662</p>
           </div>
         </div>
 
